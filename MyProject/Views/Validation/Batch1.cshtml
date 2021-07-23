@@ -1,0 +1,220 @@
+﻿@{
+    ViewData["Title"] = "Batch1";
+}
+<html>
+<head>
+    <title>index</title>
+    <style>
+* {
+  box-sizing:border-box;
+}
+
+body {
+            font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+
+  top: 0;
+  width: 100%;
+}
+.navbar-right{
+    float: right;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: left;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: right;
+  overflow: visible;
+}
+
+.dropdown .dropbtn {
+  float: right;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  float: none;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Capture.PNG");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: #555;
+  color: white;
+}
+
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 0 10px;
+}
+
+
+.row {
+    margin: 0 -5px;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.button {
+            background-color: whitesmoke;
+            border: 2px solid black;
+            color: green;
+            padding: 5px 10px;
+            text-align: center;
+            display: inline-block;
+            font-size: 20px;
+            margin: 10px 30px;
+            cursor: pointer;
+            text-decoration:none;
+            cursor: pointer;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        @Html.ActionLink("Home", "Page1")
+
+        <div class="navbar-right">
+            @Html.ActionLink("News", "News")
+            @Html.ActionLink("About", "About")
+            @Html.ActionLink("Contact", "Contact")
+            @Html.ActionLink("Logout", "Login")
+
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">
+                Tools
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                @Html.ActionLink("Faculty Registration", "FacultyRegistration")
+                @Html.ActionLink("Module Registeration", "ModuleRegisteration")
+                @Html.ActionLink("BatchAllocation", "Batch1")
+                @Html.ActionLink("Report Management", "ReportManagement")
+                @Html.ActionLink("Award and Credit point", "Award")
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1 style="font-size:50px">Academy Portal</h1>
+        </div>
+    </div>
+    <center>
+        <h2>Batches</h2>
+
+        <div class="column">
+            <div class="row">
+                <div class="card">
+                    <p>
+                        Batch Allocation
+                    </p>
+                    <button class="button">
+                        @Html.ActionLink("Click Here", "BatchAllocation")
+                        
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <p>
+                    Batch Update
+                </p>
+                <button class="button">
+                    @Html.ActionLink("Click Here", "BatchSearch")
+                </button>
+            </div>
+        </div>
+    </center>
+</body>
+</html>
