@@ -1,4 +1,6 @@
-﻿@{
+﻿
+@{
+
     ViewData["Title"] = "Page1";
 }
 <html>
@@ -11,6 +13,7 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
+            background-image: url('');
         }
 
         .navbar {
@@ -82,7 +85,8 @@
         }
 
         .hero-image {
-            background-image: url('@Url.Content("~/C:/Users/daemk/source/repos/MyProject/MyProject/css/Capture.PNG")');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('Capture.PNG');
+            height: 50%;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -142,17 +146,16 @@
 
 </head>
 <body>
-
-
+    
     <div class="navbar">
         @Html.ActionLink("Home", "Page1")
-        
+
         <div class="navbar-right">
             @Html.ActionLink("News", "News")
             @Html.ActionLink("About", "About")
             @Html.ActionLink("Contact", "Contact")
             @Html.ActionLink("Logout", "Login")
-            
+
         </div>
         <div class="dropdown">
             <button class="dropbtn">
@@ -185,8 +188,7 @@
                 <p><span style="font-size:36px">For Customized Learning.</span> You should buy this Module because lecture videos ,assigned readings from textbook or created on Brightspace,open educational resources (OER) created by experts,problem sets from textbook’s self-grading online platform.</p>
             </div>
             <div class="column-33">
-                
-                <img src="~/css/gettyimage.jpg" width="335" height="471" />
+                 <img src="~/css/gettyimage.jpg" width="335" height="471" />
             </div>
         </div>
     </div>

@@ -1,4 +1,4 @@
-﻿
+﻿@model MyProject.Models.Batch_Screen
 @{
     ViewData["Title"] = "BatchScreen";
 }
@@ -197,65 +197,38 @@ form {
         </div>
     </div>
     <h1>Batch Screen</h1>
-    <form action="submit">
-        <table>
-
-            <tr>
-                <td><label>Batch ID</label>
-                <td>
-                    <select>
-                        <option value="">option 1</option>
-                        <option value="">option 2</option>
-                        <option value="">option 3</option>
-
-                    </select>
-                </td>
-            </tr>
-            <tr>
-            <tr>
-                <td><label>Feedback Percentage</label></td>
-                <td><input type="number" name="Percent" placeholder="Enter Percentage" required></td>
-            </tr>
-            <tr>
-                <td><label>Extra Hours</label></td>
-                <td><input type="number" name="Hours" placeholder="Extra Hours" required></td>
-            </tr>
-            <tr>
-                <td><label>BatchPass Percentage</label></td>
-                <td><input type="number" name="Percent" placeholder="Enter Percentage" required></td>
-            </tr>
-            <tr>
-                <td><label>Faculty Upgrade</label>
-                <td>
-                    <select>
-                        <option value="">B-TECH</option>
-                        <option value="">M-TECH</option>
-                        <option value="">B-COM</option>
-
-                    </select>
-                </td>
-            </tr>
-            <tr>
-            <tr>
-                <td><label>Certification Done</label>
-
-                <td>
-                    <input type="radio" id="YES" name="YES">
-                    <label>YES</label><br>
-
-                    <input type="radio" id="NO" name="NO">
-                    <label>NO</label><br>
-                </td>
-            </tr>
-            <tr>
-                <td><label>Hands on Completion</label></td>
-                <td><input type="number" name="Percent" placeholder="Enter Percentage" required></td>
-            </tr>
-            <tr>
-                <td><input type="reset"></td>
-                <td colspan="2"><input type="submit" value="submit form"></td>
-            </tr>
-        </table>
+    <form asp-action="BatchScreen" class="form-horizontal">
+        <div class="form-group">
+            <label class="control-label">Batch ID </label>
+            <input class="form-control" asp-for="Batch_ID" type="text" name="Batch_ID" placeholder="Enter your Batch" />
+        </div>
+        <div class="form-group">
+            <label class="control-label">Feedback Percentage</label>
+            <input class="form-control" asp-for="Feedback_Percentage" name="Feedback_Percentage" placeholder="Enter your Percentage" />
+        </div>
+        <div class="form-group">
+            <label class="control-label">Extra Hours</label>
+            <input class="form-control" asp-for="Extra_Hours" name="Extra_Hours" placeholder="Extra Hours " />
+        </div>
+        <div class="form-group">
+            <label class="control-label">BatchPass Percentage</label>
+            <input class="form-control" asp-for="BatchPass_Percentage" name="BatchPass_Percentage" placeholder="Enter BatchPass Percentage" />
+        </div>
+        <div class="form-group">
+            <label class="control-label">Faculty Upgrade</label>
+            <input class="form-control" asp-for="Faculty_Upgrade" name="Faculty_Upgrade" placeholder="Yes or NO" />
+        </div>
+        <div class="form-group">
+            <label class="control-label">Certification Done</label>
+            <input class="form-control" asp-for="Certification_Done" name="Certification_Done" placeholder="Project Yes or NO" />
+        </div>
+        <div class="form-group">
+            <label class="control-label">Handson Completion Percentage</label>
+            <input class="form-control" asp-for="Handson_Completion_Percentage" name="Handson_Completion_Percentage" placeholder="Completion_Percentage" />
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Submit" class="btn btn-primary" />
+        </div>
     </form>
 </body>
 </html>

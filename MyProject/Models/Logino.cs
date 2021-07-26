@@ -5,13 +5,12 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
+
 namespace MyProject.Models
 {
     
-    public class Validation
+    public class Logino
     {
-        [Key]
-        public int Unique_Identity { get; set; }
 
         
         public string UserName { get; set; }

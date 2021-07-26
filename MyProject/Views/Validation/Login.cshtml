@@ -1,148 +1,175 @@
-﻿@{
-    ViewData["Title"] = "Index";
+﻿@model MyProject.Models.Logino
+@{
+    ViewData["Title"] = "Login";
 }
 <html>
 <head>
     <title>index</title>
-    <style>
-        body {
-            background-image: url(images\bg-01.jpg);
-            background-repeat: no-repeat;
-            overflow: hidden;
-        }
+ <style>
+     body {
+         background-image: url(bg-01.jpg);
+         background-repeat: no-repeat;
+         overflow: hidden;
+     }
 
-        .split {
-            height: 100%;
-            width: 50%;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            overflow-x: hidden;
-            padding-top: 20px;
-        }
+     .split {
+         height: 100%;
+         width: 50%;
+         position: fixed;
+         z-index: 1;
+         top: 0;
+         overflow-x: hidden;
+         padding-top: 20px;
+     }
 
-        .left {
-            left: 0;
-        }
+     .left {
+         left: 0;
+     }
 
-        .right {
-            right: 0;
-            background-color: rgb(7, 7, 7);
-        }
+     .right {
+         right: 0;
+         
+     }
 
-        .centered {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
+     .centered {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         text-align: center;
+     }
 
-            .centered img {
-                width: 150px;
-                border-radius: 50%;
-            }
+         .centered img {
+             width: 150px;
+             border-radius: 50%;
+         }
 
-        .container {
-            width: 380px;
-            margin: 7% auto;
-            border-radius: 25px;
-            background-color: rgba(0,0,0,0.1);
-            box-shadow: 0 0 17px #333;
-        }
+     .container {
+         width: 380px;
+         margin: 7% auto;
+         border-radius: 25px;
+         background-color: rgba(0,0,0,0.1);
+         box-shadow: 0 0 17px #333;
+     }
 
-        .header {
-            text-align: center;
-            padding-top: 75px;
-        }
+     .header {
+         text-align: center;
+         padding-top: 75px;
+     }
 
-            .header h2 {
-                color: aqua;
-                font-size: 45px;
-                margin-bottom: 80px;
-            }
+         .header h2 {
+             color: black;
+             font-size: 45px;
+             margin-bottom: 80px;
+         }
 
-        .main {
-            text-align: center;
-        }
+     .main {
+         text-align: center;
+     }
 
-            .main input, button {
-                width: 300px;
-                height: 40px;
-                border: none;
-                outline: none;
-                padding-left: 40px;
-                box-sizing: border-box;
-                font-size: 15px;
-                color: #333;
-                margin-bottom: 40px;
-            }
+         .main input, button {
+             width: 300px;
+             height: 40px;
+             border: none;
+             outline: none;
+             padding-left: 40px;
+             box-sizing: border-box;
+             font-size: 15px;
+             color: #333;
+             margin-bottom: 40px;
+         }
 
-            .main button {
-                padding-left: 0;
-                background-color: lightseagreen;
-                letter-spacing: 1px;
-                font-weight: bold;
-                margin-bottom: 70px;
-            }
+         .main button {
+             padding-left: 0;
+             background-color: lightseagreen;
+             letter-spacing: 1px;
+             font-weight: bold;
+             margin-bottom: 70px;
+         }
 
-                .main button:hover {
-                    box-shadow: 2px 2px 5px #555;
-                    background-color: deepskyblue;
-                }
+             .main button:hover {
+                 box-shadow: 2px 2px 5px #555;
+                 background-color: deepskyblue;
+             }
 
-            .main input:hover {
-                box-shadow: 2px 2px 5px #555;
-                background-color: #ddd;
-            }
+         .main input:hover {
+             box-shadow: 2px 2px 5px #555;
+             background-color: #ddd;
+         }
 
-            .main span {
-                position: relative;
-            }
+         .main span {
+             position: relative;
+         }
 
-            .main i {
-                position: absolute;
-                left: 15px;
-                color: #333;
-                font-size: 16px;
-                top: 2px;
-            }
-    </style>
+         .main i {
+             position: absolute;
+             left: 15px;
+             color: #333;
+             font-size: 16px;
+             top: 2px;
+         }
+     form {
+         width: 300px;
+         height: 250px;
+         padding: 10px 0;
+         margin: 50px auto;
+     }
+ </style>
 </head>
 <body>
     <div class="split left">
         <div class="centered">
         </div>
     </div>
-
     <div class="split right">
         <div class="centered">
             <h1>
-                
-                    Welcome to the Academy Portal
-                  
-           
+
+                Welcome to the Academy Portal
+
             </h1>
-            <div class="container">
-                <div class="header">
-                    <h2>Admin Login</h2>
-                </div>
-                <div class="main">
-                    <form action="Page1">
-                        <span>
-                            <i class="fa fa-user"></i>
-                            <input type="text" placeholder="Username" name="" required>
-                        </span><br>
-                        <span>
-                            <i class="fa fa-lock"></i>
-                            <input type="password" placeholder="password" name="" required>
-                        </span><br>
-                        <button>login</button>
-                    </form>
+            <div class="main">
+                <div class="container">
+                    <div class="header">
+                        <h2>Login in Continue</h2>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-4"></div>
+                            <div class="col-sm-4">
+                                <form class="form-horizontal" asp-controller="Validation" asp-action="Login" method="post">
+
+                                    <div class="form-group">
+                                        <label class="control-label">User Name</label>
+                                        <input asp-for="UserName" class="form-control" type="text" name="UserName" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Password</label>
+                                        <input asp-for="Password" class="form-control" type="password" name="Password" />
+                                    </div>
+                                    <div class="form-group">
+
+                                        <input type="submit" value="Submit" formaction="Page1" formmethod="post" />
+
+
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-sm-4"></div>
+                        </div>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
 </body>
 </html>
+@{
+    if (TempData["msg"] != null)
+    {
+        <script>
+            alert('@TempData["msg"]')
+        </script>
+    }
+}
